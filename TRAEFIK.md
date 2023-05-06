@@ -29,3 +29,13 @@ services:
       - 80:80
       - 443:443
 ```
+
+Labels for load balanced containers
+```
+    labels:
+      traefik.enable: true
+      traefik.http.routers.rocketchat.rule: Host(`${PRIMARY_DOMAIN}`)
+      traefik.http.services.rocketchat.loadbalancer.server.port: 3000
+      traefik.http.routers.rocketchat.entrypoints: websecure
+      traefik.http.routers.rocketchat.tls.certresolver: myresolver
+```
