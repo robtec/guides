@@ -25,6 +25,10 @@ services:
       - "/etc/letsencrypt:/letsencrypt"
     depends_on:
       - database
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "3"
     ports:
       - 80:80
       - 443:443
