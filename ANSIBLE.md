@@ -28,7 +28,7 @@
 0.0.0.0
 
 [server2]
-1.0.1.0
+1.0.1.0 ansible_user=max ansible_ssh_pass=superstrongpass
 ```
 
 ## Ansible Command
