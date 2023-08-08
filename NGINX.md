@@ -62,9 +62,9 @@ server {
 	server_name _;
 
 	location / {
-		# First attempt to serve request as file, then
-		# as directory, then fall back to displaying a 404.
-		try_files $uri $uri/ =404;
-	}
+    		proxy_set_header Host $host;
+    		proxy_set_header X-Real-IP $remote_addr;
+                proxy_pass http://localhost:1234;
+        }
 }
 ```
