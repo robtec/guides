@@ -5,6 +5,11 @@ name: Deploy Code
 
 on:
   workflow_dispatch:
+  push:
+    branches: [ "main" ]
+    paths-ignore:
+      - '.github/workflows'
+      - 'README.md'
 
 jobs:
   build:
