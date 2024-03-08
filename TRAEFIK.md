@@ -43,3 +43,9 @@ Labels for load balanced containers
       traefik.http.routers.webapp.entrypoints: websecure
       traefik.http.routers.webapp.tls.certresolver: myresolver
 ```
+
+.env
+```
+PRIMARY_DOMAIN=
+LETSENCRYPT_EMAIL=
+```
