@@ -38,10 +38,10 @@ Labels for load balanced containers
 ```
     labels:
       traefik.enable: true
-      traefik.http.routers.webapp.rule: Host(`${PRIMARY_DOMAIN}`)
-      traefik.http.services.webapp.loadbalancer.server.port: 3000
-      traefik.http.routers.webapp.entrypoints: websecure
-      traefik.http.routers.webapp.tls.certresolver: myresolver
+      traefik.http.routers.XXXXXapp.rule: Host(`${PRIMARY_DOMAIN}`)
+      traefik.http.services.XXXXXapp.loadbalancer.server.port: 3000
+      traefik.http.routers.XXXXXapp.entrypoints: websecure
+      traefik.http.routers.XXXXXapp.tls.certresolver: myresolver
 ```
 
 .env
