@@ -56,3 +56,24 @@ EXPOSE 8080
 
 CMD ["/web-app"]
 ```
+
+## Node (yarn)
+```
+FROM node:18.8-alpine
+
+ENV NODE_ENV=production
+
+RUN apk add bash
+
+WORKDIR /home/node/app/
+
+COPY package*.json ./
+
+COPY . .
+
+RUN npm install copyfiles -g
+
+ENTRYPOINT ["./entrypoint.sh"]
+
+CMD ["yarn", "serve"]
+```
