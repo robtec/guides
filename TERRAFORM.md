@@ -1,4 +1,4 @@
-##Providers
+## `providers.tf`
 ```
 terraform {
   required_providers {
@@ -10,7 +10,7 @@ terraform {
 }
 ```
 
-##Main
+## `main.tf`
 ```
 locals {
   build_path = "build.zip"
