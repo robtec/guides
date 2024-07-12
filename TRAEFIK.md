@@ -1,8 +1,58 @@
 # Traefik config for Docker Compose
 
+# v3
 ```
-version: "3.9"
+services:
+  traefik:
+    image: traefik:3.0
+    ports:
+      - 80:80
+      - 443:443
+    restart: always
+    labels:
+      - traefik.enable=true
+      - traefik.docker.network=traefik-public
+      - traefik.http.middlewares.https-redirect.redirectscheme.scheme=https
+      - traefik.http.middlewares.https-redirect.redirectscheme.permanent=true
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - traefik-public-certificates:/certificates
+    command:
+      - --providers.docker
+      - --providers.docker.exposedbydefault=false
+      - --entrypoints.http.address=:80
+      - --entrypoints.https.address=:443
+      - --certificatesresolvers.le.acme.email=${EMAIL?Variable not set}
+      - --certificatesresolvers.le.acme.storage=/certificates/acme.json
+      - --certificatesresolvers.le.acme.tlschallenge=true
+      - --accesslog
+      - --log
+      - --api
+    networks:
+      - traefik-public
 
+volumes:
+  traefik-public-certificates:
+
+networks:
+  traefik-public:
+```
+
+# labels
+```
+labels:
+  - traefik.enable=true
+  - traefik.docker.network=traefik-public
+  - traefik.constraint-label=traefik-public
+  - traefik.http.routers.XXXXX.rule=Host(`${DOMAIN}`)
+  - traefik.http.routers.XXXXX.entrypoints=https
+  - traefik.http.routers.XXXXX.tls=true
+  - traefik.http.routers.XXXXX.tls.certresolver=le
+  - traefik.http.services.XXXXX.loadbalancer.server.port=8080
+```
+
+# v2
+```
 services:
 
   traefik:
