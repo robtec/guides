@@ -1,5 +1,10 @@
 # Caddy Proxy
 
+Network
+```
+$ docker network create -d bridge internal-apps
+```
+
 `docker-compose.yml`
 
 ```
@@ -8,6 +13,8 @@ services:
     image: caddy:${VERSION}
     restart: unless-stopped
     container_name: caddy
+    networks
+      - internal-apps
     ports:
       - "80:80"
       - "443:443"
