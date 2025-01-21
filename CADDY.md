@@ -14,11 +14,17 @@ caddy:
 ```
 
 `Caddyfile`
+
 ```
-n8n.domain.dev {
-    reverse_proxy n8n:5678 {
-      flush_interval -1
-    }
+example.com {
+  root * /var/www/site
+  file_server
+}
+
+app.example.com {
+  reverse_proxy app:8080 {
+    flush_interval -1
+  }
 }
 ```
 
