@@ -26,6 +26,10 @@ services:
 volumes:
   caddy-data:
   caddy-config:
+
+networks:
+  internal-apps:
+    external: true
 ```
 
 `Caddyfile`
