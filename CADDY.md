@@ -21,3 +21,5 @@ n8n.domain.dev {
     }
 }
 ```
+
+Examples - https://caddyserver.com/docs/caddyfile/directives/reverse_proxy#examples
