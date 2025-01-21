@@ -1,16 +1,24 @@
 # Caddy Proxy
 
+`docker-compose.yml`
+
 ```
-caddy:
-  image: caddy:latest
-  restart: unless-stopped
-  ports:
-    - "80:80"
-    - "443:443"
-  volumes:
-    - caddy_data:/data
-    - ${DATA_FOLDER}/caddy_config:/config
-    - ${DATA_FOLDER}/caddy_config/Caddyfile:/etc/caddy/Caddyfile
+services:
+  caddy:
+    image: caddy:${VERSION}
+    restart: unless-stopped
+    container_name: caddy
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - caddy-data:/data
+      - caddy-config:/config
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+
+volumes:
+  caddy-data:
+  caddy-config:
 ```
 
 `Caddyfile`
