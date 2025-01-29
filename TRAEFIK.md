@@ -1,6 +1,8 @@
 # Traefik config for Docker Compose
 
-https://doc.traefik.io/traefik/reference/dynamic-configuration/docker/
+* https://doc.traefik.io/traefik/reference/dynamic-configuration/docker/
+
+* https://github.com/bluepuma77/traefik-best-practice/
 
 # v3
 ```
