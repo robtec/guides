@@ -10,7 +10,7 @@ $ python --version
 $ pip --version
 ```
 
-Upgrade
+Upgrade, if needed.
 ```
 $ sudo apt install -y software-properties-common
 
