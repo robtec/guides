@@ -23,8 +23,10 @@ Set `python` to the new version
 ```
 $ sudo ln -s -f /usr/bin/python3.11 /usr/bin/python
 ```
+
 Upgrade pip
 ```
+$ python -m pip install --upgrade pip
 ```
 
 Compile `ffmpeg` for Nvidia GPUs
