@@ -29,4 +29,4 @@ Upgrade pip
 
 Compile `ffmpeg` for Nvidia GPUs
 
-https://docs.nvidia.com/video-technologies/video-codec-sdk/12.0/ffmpeg-with-nvidia-gpu/index.html
+https://docs.nvidia.com/video-technologies/video-codec-sdk/12.0/ffmpeg-with-nvidia-gpu/index.html#compiling-for-linux
