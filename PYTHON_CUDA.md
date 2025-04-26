@@ -24,9 +24,9 @@ Set `python` to the new version
 $ sudo ln -s -f /usr/bin/python3.11 /usr/bin/python
 ```
 
-Upgrade pip
+Install pip
 ```
-$ python -m pip install --upgrade pip
+$ curl -sS https://bootstrap.pypa.io/get-pip.py | python
 ```
 
 Compile `ffmpeg` for Nvidia GPUs (possibly option, standard install may work)
