@@ -2,7 +2,7 @@
 
 ## Upgrade Python
 
-Check your existing version, we are aiming for `3.11.x`
+Check your existing version, we are aiming for python `3.11.x` and pip `25.x`
 
 ```
 $ python --version
@@ -19,7 +19,7 @@ $ sudo add-apt-repository -y ppa:deadsnakes/ppa
 $ sudo apt-get install python3.11 python3.11-dev python3.11-venv -y
 ```
 
-Set `python` to the new version
+Link `python` to the new version
 ```
 $ sudo ln -s -f /usr/bin/python3.11 /usr/bin/python
 ```
@@ -28,14 +28,6 @@ Install pip
 ```
 $ curl -sS https://bootstrap.pypa.io/get-pip.py | python
 ```
-
-Compile `ffmpeg` for Nvidia GPUs (possibly option, standard install may work)
-
-https://docs.nvidia.com/video-technologies/video-codec-sdk/12.0/ffmpeg-with-nvidia-gpu/index.html#compiling-for-linux
-
-Install CUDA toolkit (linux, ubuntu 20.04, x86)
-
-https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&Distribution=Ubuntu&target_version=20.04&target_type=deb_local
 
 Install pytorch and tooling
 ```
