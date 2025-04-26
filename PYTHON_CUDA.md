@@ -43,6 +43,8 @@ sudo dpkg -i cuda-keyring_1.1-1_all.deb
 sudo apt-get update
 
 sudo apt-get -y install cuda-toolkit-12-8
+
+sudo apt-get install -y nvidia-open
 ```
 Guide - https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&Distribution=Ubuntu&target_version=20.04&target_type=deb_network
 
