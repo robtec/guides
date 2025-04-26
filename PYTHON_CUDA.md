@@ -29,6 +29,18 @@ Install pip
 $ curl -sS https://bootstrap.pypa.io/get-pip.py | python
 ```
 
+Make a directory for building FFmpeg for NVIDIA
+```
+$ mkdir development && cd development/
+```
+
+Follow the steps here to build FFmpeg - https://docs.nvidia.com/video-technologies/video-codec-sdk/12.0/ffmpeg-with-nvidia-gpu/index.html
+
+Verify FFmpeg for NVIDIA
+```
+$ ffmpeg -decoders | grep -i nvidia
+```
+
 Install pytorch and tooling
 ```
 # This corresponds to CUDA Toolkit version 12.8. It should be the same one
