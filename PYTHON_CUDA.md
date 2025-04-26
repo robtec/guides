@@ -2,12 +2,11 @@
 
 ## Upgrade Python
 
-Check your existing version, we are aiming for python `3.11.x` and pip `25.x`
+Check your existing version, we are aiming for python `3.11.x`
 
 ```
 $ python --version
 
-$ pip --version
 ```
 
 Install/upgrade, if needed.
