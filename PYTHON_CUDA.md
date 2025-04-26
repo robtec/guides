@@ -34,6 +34,8 @@ Make a directory for building FFmpeg for NVIDIA
 $ mkdir development && cd development/
 ```
 
+Download the CUDA toolkit - https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&Distribution=Ubuntu&target_version=20.04&target_type=deb_local
+
 Follow the steps here to build FFmpeg - https://docs.nvidia.com/video-technologies/video-codec-sdk/12.0/ffmpeg-with-nvidia-gpu/index.html
 
 Verify FFmpeg for NVIDIA
