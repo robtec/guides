@@ -10,7 +10,7 @@ python --version
 
 Install/upgrade, if needed.
 ```
-sudo apt install -y software-properties-common
+sudo apt install -y software-properties-common curl
 
 sudo add-apt-repository -y ppa:deadsnakes/ppa
 
