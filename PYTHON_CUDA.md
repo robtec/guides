@@ -39,6 +39,13 @@ If not installed, consider install options below
 Install conda
 ```
 cd /tmp/ && curl -O https://repo.anaconda.com/archive/Anaconda3-2024.10-1-Linux-x86_64.sh
+
+bash Anaconda3-2024.10-1-Linux-x86_64.sh
+```
+
+Install ffmpeg
+```
+conda install ffmpeg
 ```
 
 ### Option 2 - Build from Source
