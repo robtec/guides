@@ -14,7 +14,7 @@ sudo apt install -y software-properties-common curl
 
 sudo add-apt-repository -y ppa:deadsnakes/ppa
 
-sudo apt-get install python3.11 python3.11-dev python3.11-venv -y
+sudo apt-get install python3.11 python3.11-dev python3.11-venv python3-launchpadlib -y
 ```
 
 Link `python` to the new version
