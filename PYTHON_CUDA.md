@@ -32,6 +32,24 @@ Make a directory for building FFmpeg for NVIDIA
 $ mkdir development && cd development/
 ```
 
+Verify FFmpeg has NVIDIA codecs
+```
+$ ffmpeg -decoders | grep -i nvidia
+```
+
+If not installed, consider install options below
+
+### Option 1 - Install with `conda`
+
+Install conda
+```
+cd /tmp/ && curl -O https://repo.anaconda.com/archive/Anaconda3-2024.10-1-Linux-x86_64.sh
+```
+
+
+
+### Option 2 - Build from Source
+
 Install the CUDA toolkit
 ```
 wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/cuda-keyring_1.1-1_all.deb
@@ -48,10 +66,7 @@ Guide - https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=
 
 Follow the steps here to build FFmpeg - https://docs.nvidia.com/video-technologies/video-codec-sdk/12.0/ffmpeg-with-nvidia-gpu/index.html
 
-Verify FFmpeg for NVIDIA
-```
-$ ffmpeg -decoders | grep -i nvidia
-```
+
 
 Install pytorch and tooling
 ```
