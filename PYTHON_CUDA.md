@@ -25,6 +25,8 @@ sudo ln -s -f /usr/bin/python3.11 /usr/bin/python
 Install pip
 ```
 curl -sS https://bootstrap.pypa.io/get-pip.py | python
+
+source ~/.profile
 ```
 
 Verify FFmpeg has NVIDIA codecs
