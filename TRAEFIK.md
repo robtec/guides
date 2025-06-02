@@ -8,7 +8,8 @@
 ```
 services:
   traefik:
-    image: traefik:3.0
+    image: traefik:v3.3.4
+    container_name: traefik
     ports:
       - 80:80
       - 443:443
@@ -16,22 +17,23 @@ services:
     labels:
       - traefik.enable=true
       - traefik.docker.network=traefik-public
-      - traefik.http.middlewares.https-redirect.redirectscheme.scheme=https
-      - traefik.http.middlewares.https-redirect.redirectscheme.permanent=true
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
       - traefik-public-certificates:/certificates
     command:
       - --providers.docker
       - --providers.docker.exposedbydefault=false
-      - --entrypoints.http.address=:80
-      - --entrypoints.https.address=:443
-      - --certificatesresolvers.le.acme.email=${EMAIL?Variable not set}
+      - --entrypoints.web.address=:80
+      - --entrypoints.web.http.redirections.entryPoint.scheme=https
+      - --entrypoints.web.http.redirections.entryPoint.to=websecure
+      - --entrypoints.websecure.address=:443
       - --certificatesresolvers.le.acme.storage=/certificates/acme.json
+      - --certificatesresolvers.le.acme.email=${LE_EMAIL}
       - --certificatesresolvers.le.acme.tlschallenge=true
       - --accesslog
       - --log
       - --api
+      - --log.level=DEBUG
     networks:
       - traefik-public
 
